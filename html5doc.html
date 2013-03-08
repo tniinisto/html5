@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<html>
+	
+<head>
+	<meta charset="utf-8"/>
+	<title>HTML5 testing</title>	
+
+	<link rel="stylesheet" type="text/css" href="main.css" />
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		    
+	  <script>
+     /*jQuery(document).ready(function(){
+     	       
+       $("a").click(function(event){
+       	 //alert("a home clicked...");
+       	 $("nav a").removeClass("current");
+       	 $(this).addClass('current');         
+      });
+      
+     });*/
+   	</script>
+
+	  <script>
+	   	$(document).ready(function() {
+			//alert("jes");
+	    $('#main_wrapper')
+	        .css({"opacity":0})   // Set to 0 as soon as possible – may result in flicker, but it's not hidden for users with no JS (Googlebot for instance!)
+	        .delay(400)           // Wait for a bit so the user notices it fade in
+	        .css({"opacity":1});  // Fade it back in. Swap css for animate in legacy browsers if required.
+			});
+		</script>
+
+</head>
+
+<body>
+		
+	<div id="main_wrapper">
+		<header id="top_header">
+				<h1> Building HTML5 document structure </h1>
+		</header>
+		
+		<nav id="top_menu">
+			<ul>
+				<li><a href="html5doc.html" id="home" class="current">Home</a></li>
+				<!--<li><a href="about.html">About</a></li>-->
+				<li><a href="ajax.html" id="geo">Geolocation</a></li>
+			</ul>
+		</nav>
+		
+		<div id="article_div">
+		
+			<section id="main_section">
+				<article>
+					<header>
+						<hgroup>
+							<h1>Article title...</h1>
+							<h2>Subtitle</h2>
+						</hgroup>
+					</header>
+				
+					<p> This is some paragraph!</p>
+					
+					<footer>
+						<p>- written by TN </p>
+					</footer>		
+				</article>
+				
+				<article>
+					<header>
+						<hgroup>
+							<h1>Article 2 title...</h1>
+							<h2>Subtitle 2 </h2>
+						</hgroup>
+					</header>
+				
+					<p> This is some 2 paragraph! Let's put some more <a href="#" ><span style="color:white">text</span></a> into this baby and see what happens...</p>
+					
+					<footer>
+						<p>- written by TN again</p>
+					</footer>		
+				</article>	
+			</section>
+			
+				<aside id="main_aside">
+					<h4>This is header4 inside the aside element</h4>
+					<p>Some text in aside...</p>
+					<br />
+					<ul>
+						<li> First item </li>
+						<li> First item </li>
+						<li> First item </li>
+						<li> First item </li>
+					</ul>
+				</aside>
+
+		</div>
+		
+		<footer id="main_footer">
+			 &copy Copyright TN
+		</footer>
+	</div>
+</body>
+
+</html>
